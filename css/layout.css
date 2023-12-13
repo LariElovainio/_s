@@ -1,0 +1,116 @@
+:root {
+	--air: 30;
+	--air-adjust: calc( var(--air) / 30 );
+	--page-gap-setting: 1.5;
+	--m-page-gap: max(1rem, calc( var(--page-gap-setting) * 1em * var(--air-adjust) ));
+	--m-page-gap-narrow: calc( var(--m-page-gap) / 2 );
+
+	--measure-setting: 5;
+	--m-measure: max(
+		calc( 1rem * var(--air-adjust) ),
+		calc( var(--measure-setting) * 1vw * var(--air-adjust) )
+	);
+	--base-page-gutter-int: 5;
+	--m-page-gutter: calc( var(--base-page-gutter-int) * 1vw * var(--air-adjust) );
+
+	--content-max-width-int: 999;
+	--m-content-max-width: calc(1em * var(--content-max-width-int));
+	--m-half-width: 50vw;
+	--m-quarter-width: 25vw;
+}
+
+@media (min-width:30em) {
+	--m-page-gap: calc( var(--air-adjust) * min(2em, 3.333vw));
+}
+
+body {
+	max-width: var(--m-content-max-width);
+}
+
+.site-header,
+.site-footer,
+main article,
+main > header {
+	padding: var(--m-measure) var(--m-page-gutter);
+}
+
+main > header {
+	padding-bottom: 0;
+}
+
+main > header + article {
+	padding-top: 0;
+}
+
+.page-template-page-modular,
+.page-template-page-onepager {
+	padding: 0;
+}
+
+.module,
+.page-template-page-onepager main section {
+	margin-block: var(--m-measure);
+	padding-block: 1em;
+	padding-left: var(--m-page-gutter);
+	padding-right: var(--m-page-gutter);
+	position: relative;
+}
+
+.columns {
+	--columns: 2;
+	column-count: var(--columns);
+	column-gap: var(--m-page-gap);
+}
+
+.columns p,
+.columns > div {
+	break-inside: avoid;
+}
+
+.columns :is(h2, h3, h4, h5) {
+	break-after: avoid;
+	break-before: auto;
+	break-inside: avoid;
+}
+
+.columns :is(h2, h3, h4, h5):first-child {
+	margin-top: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.align-bleed {
+	left: 50%;
+	margin: var(--m-measure) 0;
+	max-width: 100vw;
+	padding: 0;
+	position: relative;
+	transform: translateX(-50vw);
+	width: 100vw;
+}
+
+.align-bleed figcaption {
+	padding: 0 calc( var(--m-page-gutter) / 2 );
+}
+
+.align-pull {
+	float: right;
+	margin: 2em;
+	margin-right: 0;
+	width: min(100%, max(20em, 50%));
+}
+
+hr {
+	background: var(--c-text);
+	border: none;
+	height: 1px;
+	margin: var(--m-measure) 0;
+}
+
+.group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--m-page-gap-narrow);
+}

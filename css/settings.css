@@ -1,0 +1,27 @@
+:root {
+	--text-base-size-int: 16;
+	--text-base-line-height: 1.5;
+	--font-size-scale: 1.28;
+	--font-text: Zetkin;
+	--font-display: Hoefler Text;
+	--air: 35;
+	--base-page-gutter-int: 5;
+	--page-gap-setting: 1.6;
+	--measure-setting: 5.7;
+	--content-max-width-int: 86;
+	--l-bg-normal-int: 98;
+	--ch-bg-normal: 0;
+	--h-bg-normal: 250;
+	--l-text-normal-int: 35;
+	--ch-text-normal: 0;
+	--h-text: 95;
+	--l-text-link-int: 45;
+	--ch-text-link: 0.125;
+	--h-link: 200;
+	--l-accent-int: 45;
+	--ch-accent: 0.15;
+	--h-accent: 1;
+	--h1-color: var(--c-accent);
+	--project: ;
+	--app-view-source: none;
+}

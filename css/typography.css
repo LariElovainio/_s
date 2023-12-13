@@ -1,0 +1,251 @@
+:root {
+	--font-default: system-ui;
+	--font-text: var(--font-default);
+	--font-display: var(--font-text), var(--font-default));
+	--font-input: var(--font-default);
+	--ls-uppercase: .075em;
+
+	--text-base-size-int: 16;
+	--text-base-size: calc( var(--text-base-size-int) * 1px );
+	--font-size-scale: 1.2;
+	--font-size-small-scale: 1.2;
+	--fs-l-1: calc(1em * var(--font-size-scale));
+	--fs-l-2: calc(var(--fs-l-1) * var(--font-size-scale));
+	--fs-l-3: calc(var(--fs-l-2) * var(--font-size-scale));
+	--fs-l-4: calc(var(--fs-l-3) * var(--font-size-scale));
+	--fs-l-5: calc(var(--fs-l-4) * var(--font-size-scale));
+	--fs-s-1: calc(1em / var(--font-size-small-scale));
+	--fs-s-2: calc(var(--fs-s-1) / var(--font-size-small-scale));
+
+	--p-text-box: .0625em .2em .15em;
+
+	--fs-h1: var(--fs-l-4);
+	--fs-h2: var(--fs-l-3);
+	--fs-h3: var(--fs-l-2);
+	--fs-h4: var(--fs-l-1);
+	--fs-h5: 1rem;
+	--fs-h6: var(--fs-s-1);
+
+	--h1-all-caps: ;
+	--h2-all-caps: ;
+	--h3-all-caps: ;
+	--h4-all-caps: ;
+	--h5-all-caps: ;
+	--h6-all-caps: ;
+
+	--ls-uppercase: .075em;
+}
+
+:root {
+	--m-line-hair: .0625rem;
+	--m-line-thin: .125rem;
+	--m-line-medium: .175rem;
+	--m-line-thick: .25rem;
+	--m-line-fat: .5rem;
+}
+
+html {
+	font-size: var(--text-base-size);
+}
+
+body {
+	font-family: var(--font-text);
+	line-height: calc( (0.75 + var(--air-adjust) / 4) * var(--text-base-line-height, 1.4));
+}
+
+h1 {
+	color: var(--h1-color, var(--c-text-large));
+	font-family: var(--h1-font-family, var(--font-display));
+	font-size: var(--fs-h1, var(--fs-l-4));
+	font-weight: var(--h1-font-weight);
+	letter-spacing: var(--h1-all-caps, var(--ls-uppercase));
+	text-transform: var(--h1-all-caps, uppercase);
+}
+
+h2 {
+	color: var(--h2-color, var(--c-text-large));
+	font-family: var(--h2-font-family, var(--font-display));
+	font-size: var(--fs-h2);
+	font-weight: var(--h2-font-weight);
+	letter-spacing: var(--h2-all-caps, var(--ls-uppercase));
+	text-transform: var(--h2-all-caps, uppercase);
+}
+
+h3 {
+	color: var(--h3-color, var(--c-text));
+	font-family: var(--h3-font-family, var(--font-display));
+	font-size: var(--fs-h3);
+	font-weight: var(--h3-font-weight);
+	letter-spacing: var(--h3-all-caps, var(--ls-uppercase));
+	text-transform: var(--h3-all-caps, uppercase);
+}
+
+h4 {
+	color: var(--h4-color, var(--c-text));
+	font-family: var(--h4-font-family, var(--font-display));
+	font-size: var(--fs-h4);
+	font-weight: var(--h4-font-weight);
+	letter-spacing: var(--h4-all-caps, var(--ls-uppercase));
+	text-transform: var(--h4-all-caps, uppercase);
+}
+
+h5 {
+	color: var(--h5-color, var(--c-text-subtle));
+	font-family: var(--h5-font-family, var(--font-display));
+	font-size: var(--fs-h5);
+	font-weight: var(--h5-font-weight);
+	letter-spacing: var(--h5-all-caps, var(--ls-uppercase));
+	text-transform: var(--h5-all-caps, uppercase);
+}
+
+h6 {
+	color: var(--h6-color, var(--c-text-subtle));
+	font-family: var(--h6-font-family, var(--font-display));
+	font-size: var(--fs-h6);
+	font-weight: var(--h6-font-weight);
+	letter-spacing: var(--h6-all-caps, var(--ls-uppercase));
+	text-transform: var(--h6-all-caps, uppercase);
+}
+
+:where(h1,h2,h3,h4,h5,h6) {
+	font-family: var(--font-display);
+	font-weight: bold;
+	line-height: calc(( (.75 + var(--air-adjust) / 5) ) * 1.05 );
+	margin: calc( var(--air-adjust) * 1.5em ) 0 calc( var(--air-adjust) * .5em );
+}
+
+.settings {
+	--text-base-size: 14px;
+	font-family: var(--font-default);
+	font-size: var(--text-base-size);
+}
+
+.source textarea {
+	font-family: ui-monospace;
+	font-size: var(--fs-s-1);
+}
+
+code {
+	background: var(--c-bg-subdue);
+	font-family: ui-monospace;
+	font-size: .9em;
+	letter-spacing: .05em;
+	padding: var(--p-text-box);
+}
+
+input {
+	font-size: 100%;
+}
+
+q::before {
+	content: "“";
+}
+
+q q::before {
+	content: "‘";
+}
+
+q::after,
+[lang="fi"] q::before {
+	content: "”";
+}
+
+q q::after,
+[lang="fi"] q q::before {
+	content: "’";
+}
+
+figcaption {
+	color: var(--c-text-subtle);
+	font-size: var(--fs-s-1);
+}
+
+cite {
+	color: var(--c-text-subtle);
+	font-size: var(--fs-s-1);
+	font-style: normal;
+}
+
+cite::before {
+	content: "— ";
+}
+
+kbd {
+	font-family: ui-monospace;
+	margin-inline: .25em;
+}
+
+figure blockquote {
+	margin-inline: 0;
+}
+
+samp {
+	background: var(--c-bg-info);
+	font-family: ui-monospace;
+	font-size: .925em;
+	padding: var(--p-text-box);
+}
+
+table {
+	border-collapse: collapse;
+	line-height: 1.25;
+}
+
+th {
+	font-weight: bold;
+}
+
+th,
+td {
+	padding: .25em .5em;
+}
+
+thead th {
+	border-bottom: var(--m-line-thin) solid var(--c-text);
+}
+
+mark {
+	background-color: var(--c-bg-mark);
+}
+
+a, u {
+	text-underline-offset: .125em;
+	text-decoration-thickness: .075em;
+}
+
+.lead {
+	font-size: var(--fs-l-1);
+}
+
+/* ! Information */
+
+ul.numbers {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.numbers li::before {
+	content: none;
+}
+
+ul.numbers li strong {
+	display: block;
+	font-size: var(--fs-s-2);
+	font-weight: 500;
+	letter-spacing: .05em;
+	line-height: .85;
+	text-transform: uppercase;
+}
+
+ul.numbers li em {
+	font-size: var(--fs-l-4);
+	font-style: normal;
+	margin: 0;
+	letter-spacing: -.025em;
+	word-spacing: -.075em;
+}

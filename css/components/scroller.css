@@ -1,0 +1,38 @@
+.scroller .autoscroll {
+	display: flex;
+}
+
+.scroller:has(.autoscroll) {
+	overflow: hidden;
+}
+
+.scroller .autoscroll .scroller-content {
+	--timing: calc( var(--item-count) * 5s );
+	--initial-position: calc( -1 * var(--item-width) );
+	--end-position: calc( -1 * 100% - var(--item-width) );
+	animation: autoscroller var(--timing) infinite linear;
+	margin-right: var(--item-gap);
+}
+
+@media (prefers-reduced-motion) {
+	.scroller:has(.autoscroll) {
+		overflow: auto;
+	}
+
+	.scroller .autoscroll .scroller-content {
+		animation: none;
+	}
+
+	.scroller .autoscroll [aria-hidden] {
+		display: none;
+	}
+}
+
+@keyframes autoscroller {
+	from {
+		transform: translateX(var(--initial-position));
+	}
+	to {
+		transform: translateX(var(--end-position));
+	}
+}

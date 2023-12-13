@@ -1,0 +1,28 @@
+@media (min-width: 58.75em) {
+:root {
+	--text-base-size-int: 18;
+	--text-base-line-height: 1.4;
+	--font-size-scale: 1.28;
+	--font-text: ;
+	--font-display: ;
+	--air: 30;
+	--base-page-gutter-int: 5;
+	--page-gap-setting: 1.5;
+	--measure-setting: 5;
+	--content-max-width-int: 100;
+	--l-bg-normal-int: 98;
+	--ch-bg-normal: 0;
+	--h-bg-normal: 250;
+	--l-text-normal-int: 35;
+	--ch-text-normal: 0;
+	--h-text: 95;
+	--l-text-link-int: 45;
+	--ch-text-link: 0.125;
+	--h-link: 200;
+	--l-accent-int: 45;
+	--ch-accent: 0.15;
+	--h-accent: 1;
+	--project: ;
+	--app-view-source: none;
+}
+}
