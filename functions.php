@@ -138,7 +138,7 @@ function concrete_widgets_init() {
  * Enqueue scripts and styles.
  */
 function concrete_scripts() {
-	wp_enqueue_style('concrete-styles', get_template_directory_uri() . 'css/styles.css', array(), CONCRETE_VERSION);
+	wp_enqueue_style('concrete-styles', get_template_directory_uri() . '/css/styles.css', array(), CONCRETE_VERSION);
 	//wp_enqueue_style( 'concrete-style', get_stylesheet_uri(), array(), CONCRETE_VERSION );
 	//wp_style_add_data( 'concrete-style', 'rtl', 'replace' );
 
