@@ -1,10 +1,10 @@
 <?php
 /**
- * _s functions and definitions
+ * Concrete functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _s
+ * @package concrete
  */
 
 if ( ! defined( 'CONCRETE_VERSION' ) ) {
