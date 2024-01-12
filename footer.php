@@ -16,13 +16,13 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'concrete' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'concrete' ), 'WordPress' );
+				printf( esc_html__( 'Powered by %s', 'concrete' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'concrete' ), 'concrete', '<a href="https://automattic.com/">Automattic</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'concrete' ), 'Concrete', '<a href="https://aivan.fi/">Aivan</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
