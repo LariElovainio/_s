@@ -1,7 +1,7 @@
 :root {
 	--font-default: system-ui;
 	--font-text: var(--font-default);
-	--font-display: var(--font-text), var(--font-default));
+	--font-display: var(--font-text, var(--font-default));
 	--font-input: var(--font-default);
 	--ls-uppercase: .075em;
 
@@ -57,7 +57,7 @@ h1 {
 	color: var(--h1-color, var(--c-text-large));
 	font-family: var(--h1-font-family, var(--font-display));
 	font-size: var(--fs-h1, var(--fs-l-4));
-	font-weight: var(--h1-font-weight);
+	font-weight: var(--h1-font-weight, bold);
 	letter-spacing: var(--h1-all-caps, var(--ls-uppercase));
 	text-transform: var(--h1-all-caps, uppercase);
 }
@@ -66,7 +66,7 @@ h2 {
 	color: var(--h2-color, var(--c-text-large));
 	font-family: var(--h2-font-family, var(--font-display));
 	font-size: var(--fs-h2);
-	font-weight: var(--h2-font-weight);
+	font-weight: var(--h2-font-weight, bold);
 	letter-spacing: var(--h2-all-caps, var(--ls-uppercase));
 	text-transform: var(--h2-all-caps, uppercase);
 }
@@ -75,7 +75,7 @@ h3 {
 	color: var(--h3-color, var(--c-text));
 	font-family: var(--h3-font-family, var(--font-display));
 	font-size: var(--fs-h3);
-	font-weight: var(--h3-font-weight);
+	font-weight: var(--h3-font-weight, bold);
 	letter-spacing: var(--h3-all-caps, var(--ls-uppercase));
 	text-transform: var(--h3-all-caps, uppercase);
 }
@@ -84,7 +84,7 @@ h4 {
 	color: var(--h4-color, var(--c-text));
 	font-family: var(--h4-font-family, var(--font-display));
 	font-size: var(--fs-h4);
-	font-weight: var(--h4-font-weight);
+	font-weight: var(--h4-font-weight, bold);
 	letter-spacing: var(--h4-all-caps, var(--ls-uppercase));
 	text-transform: var(--h4-all-caps, uppercase);
 }
@@ -93,7 +93,7 @@ h5 {
 	color: var(--h5-color, var(--c-text-subtle));
 	font-family: var(--h5-font-family, var(--font-display));
 	font-size: var(--fs-h5);
-	font-weight: var(--h5-font-weight);
+	font-weight: var(--h5-font-weight, bold);
 	letter-spacing: var(--h5-all-caps, var(--ls-uppercase));
 	text-transform: var(--h5-all-caps, uppercase);
 }
@@ -102,7 +102,7 @@ h6 {
 	color: var(--h6-color, var(--c-text-subtle));
 	font-family: var(--h6-font-family, var(--font-display));
 	font-size: var(--fs-h6);
-	font-weight: var(--h6-font-weight);
+	font-weight: var(--h6-font-weight, bold);
 	letter-spacing: var(--h6-all-caps, var(--ls-uppercase));
 	text-transform: var(--h6-all-caps, uppercase);
 }
