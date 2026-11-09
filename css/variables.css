@@ -1,13 +1,12 @@
-@media (min-width: 58.75em) {
+@media (min-width: 48.875em) {
 :root {
-	--text-base-size-int: 18;
+	--text-base-size-int: 16;
 	--text-base-line-height: 1.4;
-	--font-size-scale: 1.28;
-	--font-text: ;
-	--font-display: ;
+	--font-size-scale: 1.2;
+	--font-text: system-ui;
 	--air: 30;
-	--base-page-gutter-int: 5;
-	--page-gap-setting: 1.5;
+	--base-page-margin-int: 5;
+	--page-gutter-setting: 1.5;
 	--measure-setting: 5;
 	--content-max-width-int: 100;
 	--l-bg-normal-int: 98;
@@ -19,9 +18,10 @@
 	--l-text-link-int: 45;
 	--ch-text-link: 0.125;
 	--h-link: 200;
-	--l-accent-int: 45;
-	--ch-accent: 0.15;
-	--h-accent: 1;
+	--l-accent-int: 65;
+	--ch-accent: 0.305;
+	--h-accent: 68;
+	--h1-color: var(--c-accent);
 	--project: ;
 	--app-view-source: none;
 }

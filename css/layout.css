@@ -1,17 +1,17 @@
 :root {
 	--air: 30;
 	--air-adjust: calc( var(--air) / 30 );
-	--page-gap-setting: 1.5;
-	--m-page-gap: max(1rem, calc( var(--page-gap-setting) * 1em * var(--air-adjust) ));
-	--m-page-gap-narrow: calc( var(--m-page-gap) / 2 );
+	--page-gutter-setting: 1.5;
+	--m-page-gutter: max(1rem, calc( var(--page-gutter-setting) * 1em * var(--air-adjust) ));
+	--m-page-gutter-narrow: calc( var(--m-page-gutter) / 2 );
 
 	--measure-setting: 5;
 	--m-measure: max(
 		calc( 1rem * var(--air-adjust) ),
 		calc( var(--measure-setting) * 1vw * var(--air-adjust) )
 	);
-	--base-page-gutter-int: 5;
-	--m-page-gutter: calc( var(--base-page-gutter-int) * 1vw * var(--air-adjust) );
+	--base-page-margin-int: 5;
+	--m-page-margin: calc( var(--base-page-margin-int) * 1vw * var(--air-adjust) );
 
 	--content-max-width-int: 999;
 	--m-content-max-width: calc(1em * var(--content-max-width-int));
@@ -20,7 +20,7 @@
 }
 
 @media (min-width:30em) {
-	--m-page-gap: calc( var(--air-adjust) * min(2em, 3.333vw));
+	--m-page-gutter: calc( var(--air-adjust) * min(2em, 3.333vw));
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 .site-footer,
 main article,
 main > header {
-	padding: var(--m-measure) var(--m-page-gutter);
+	padding: var(--m-measure) var(--m-page-margin);
 }
 
 main > header {
@@ -51,15 +51,15 @@ main > header + article {
 .page-template-page-onepager main section {
 	margin-block: var(--m-measure);
 	padding-block: 1em;
-	padding-left: var(--m-page-gutter);
-	padding-right: var(--m-page-gutter);
+	padding-left: var(--m-page-margin);
+	padding-right: var(--m-page-margin);
 	position: relative;
 }
 
 .columns {
 	--columns: 2;
 	column-count: var(--columns);
-	column-gap: var(--m-page-gap);
+	column-gap: var(--m-page-gutter);
 }
 
 .columns p,
@@ -92,7 +92,7 @@ img {
 }
 
 .align-bleed figcaption {
-	padding: 0 calc( var(--m-page-gutter) / 2 );
+	padding: 0 calc( var(--m-page-margin) / 2 );
 }
 
 .align-pull {
@@ -112,5 +112,5 @@ hr {
 .group {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--m-page-gap-narrow);
+	gap: var(--m-page-gutter-narrow);
 }

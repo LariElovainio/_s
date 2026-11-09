@@ -5,8 +5,8 @@
 	--font-text: Zetkin;
 	--font-display: Hoefler Text;
 	--air: 35;
-	--base-page-gutter-int: 5;
-	--page-gap-setting: 1.6;
+	--base-page-margin-int: 5;
+	--page-gutter-setting: 1.6;
 	--measure-setting: 5.7;
 	--content-max-width-int: 86;
 	--l-bg-normal-int: 98;
